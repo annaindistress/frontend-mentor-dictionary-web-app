@@ -1,0 +1,95 @@
+.select {
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.select button {
+  min-width: 114px;
+  min-height: 32px;
+  padding: 4px 44px 4px 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: capitalize;
+  text-align: right;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  background-image: url("/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) center;
+  background-size: 12px auto;
+  outline: none;
+  cursor: pointer;
+}
+
+.select button:focus-visible {
+  color: var(--color-primary);
+}
+
+.select ul {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  display: grid;
+  gap: 16px;
+  min-width: 183px;
+  margin: 0;
+  padding: 24px;
+  list-style: none;
+  border-radius: 16px;
+  background-color: var(--select-bg);
+  box-shadow: 0 5px 30px 0 var(--select-shadow);
+  transform: scale(0.5);
+  transform-origin: 100% top;
+  opacity: 0;
+  transition: all 0.25s ease-out;
+}
+
+.select .active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.select li {
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+}
+
+.select li:focus-visible {
+  color: var(--color-primary);
+}
+
+.select li[data-font="sans serif"] {
+  font-family: var(--font-sans);
+}
+
+.select li[data-font="serif"] {
+  font-family: var(--font-serif);
+}
+
+.select li[data-font="mono"] {
+  font-family: var(--font-mono);
+}
+
+@media (min-width: 768px) {
+  .select {
+    font-size: 18px;
+  }
+
+  .select button {
+    min-width: 146px;
+    padding-right: 56px;
+    background-position-x: calc(100% - 26px);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .select li:hover {
+    color: var(--color-primary);
+  }
+}

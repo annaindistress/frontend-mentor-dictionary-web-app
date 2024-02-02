@@ -1,3 +1,10 @@
+import Header from "./Header";
+
 export default function App() {
-  return <div>Dictionary web app</div>;
+  return (
+    <>
+      <Header />
+      <div>Dictionary web app</div>
+    </>
+  );
 }

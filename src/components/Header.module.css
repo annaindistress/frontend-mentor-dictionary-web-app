@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 816px;
+  margin-inline: auto;
+  padding: 24px;
+}
+
+.header img {
+  display: block;
+  width: 28px;
+  height: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 58px 40px 51px;
+  }
+
+  .header img {
+    width: 32px;
+  }
+}

@@ -1,0 +1,71 @@
+.toggle {
+  padding-left: 16px;
+  border-left: 1px solid var(--color-91);
+}
+
+.label {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-block: 6px;
+  font-size: 0;
+  color: var(--color-46);
+  cursor: pointer;
+}
+
+.toggle input:focus-visible ~ .label,
+.toggle input:checked ~ .label {
+  color: var(--color-primary);
+}
+
+.label::before,
+.label::after {
+  content: "";
+  display: block;
+}
+
+.label::before {
+  width: 40px;
+  height: 20px;
+  margin-right: 12px;
+  border-radius: 10px;
+  background-color: currentColor;
+}
+
+.label::after {
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-100);
+  transition: transform 0.35s ease-out;
+}
+
+.toggle input:checked ~ .label::after {
+  transform: translateX(20px);
+}
+
+.label svg {
+  display: block;
+  width: 20px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .toggle {
+    padding-left: 26px;
+  }
+
+  .label::before {
+    margin-right: 20px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .toggle input:hover ~ .label {
+    color: var(--color-primary);
+  }
+}

@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/lora-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/lora-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inconsolata-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inconsolata-700.woff2") format("woff2");
+}
+
+:root {
+  --color-0-transparent: hsl(0, 0%, 0%, 10%);
+  --color-2: hsl(0, 0%, 2%);
+  --color-12: hsl(0, 0%, 12%);
+  --color-18: hsl(0, 0%, 18%);
+  --color-46: hsl(0, 0%, 46%);
+  --color-51: hsl(0, 0%, 51%);
+  --color-91: hsl(0, 0%, 91%);
+  --color-96: hsl(0, 0%, 96%);
+  --color-100: hsl(0, 0%, 100%);
+  --color-primary: hsl(274, 82%, 60%);
+  --color-error: hsl(0, 100%, 66%);
+
+  --font-sans: "Inter", "Helvetica", "Arial", sans-serif;
+  --font-serif: "Lora", "Times New Roman", "Georgia", serif;
+  --font-mono: "Inconsolata", "Courier New", "Monaco", monospace;
+
+  --body-bg: var(--color-100);
+  --body-text: var(--color-18);
+  --select-bg: var(--color-100);
+  --select-shadow: var(--color-0-transparent);
+
+  --font: var(--font-sans);
+}
+
+.dark-theme {
+  --body-bg: var(--color-2);
+  --body-text: var(--color-100);
+  --select-bg: var(--color-12);
+  --select-shadow: var(--color-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--body-text);
+  background-color: var(--body-bg);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
