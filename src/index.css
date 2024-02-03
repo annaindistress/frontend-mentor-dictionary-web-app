@@ -51,12 +51,14 @@
   --color-2: hsl(0, 0%, 2%);
   --color-12: hsl(0, 0%, 12%);
   --color-18: hsl(0, 0%, 18%);
+  --color-23: hsl(0, 0%, 23%);
   --color-46: hsl(0, 0%, 46%);
   --color-51: hsl(0, 0%, 51%);
   --color-91: hsl(0, 0%, 91%);
   --color-96: hsl(0, 0%, 96%);
   --color-100: hsl(0, 0%, 100%);
   --color-primary: hsl(274, 82%, 60%);
+  --color-primary-transparent: hsl(274, 82%, 60%, 25%);
   --color-error: hsl(0, 100%, 66%);
 
   --font-sans: "Inter", "Helvetica", "Arial", sans-serif;
@@ -69,6 +71,7 @@
   --select-shadow: var(--color-0-transparent);
   --search-bg: var(--color-96);
   --search-placeholder: var(--color-18);
+  --word-border: var(--color-91);
 
   --font: var(--font-sans);
 }
@@ -80,6 +83,7 @@
   --select-shadow: var(--color-primary);
   --search-bg: var(--color-12);
   --search-placeholder: var(--color-100);
+  --word-border: var(--color-23);
 }
 
 *,

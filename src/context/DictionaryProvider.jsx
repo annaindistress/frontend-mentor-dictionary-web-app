@@ -56,11 +56,13 @@ function DictionaryProvider({ children }) {
               cause: `${data.message} ${data.resolution}`,
             });
           dispatch({ type: "word/loaded", payload: data[0] });
-        } catch (err) {
-          dispatch({
-            type: "rejected",
-            payload: [err.message, err.cause],
-          });
+        } catch (error) {
+          if (!controller.signal.aborted) {
+            dispatch({
+              type: "rejected",
+              payload: [error.message, error.cause],
+            });
+          }
         }
       }
 
