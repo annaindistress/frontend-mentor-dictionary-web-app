@@ -1,0 +1,38 @@
+.loader {
+  position: relative;
+  padding-block: 48px 24px;
+  font-size: 0;
+  text-align: center;
+}
+
+.loader::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 3px solid var(--color-primary);
+  border-top-color: transparent;
+  animation: spin 1.2s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .loader {
+    padding-top: 108px;
+  }
+
+  .loader::before {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

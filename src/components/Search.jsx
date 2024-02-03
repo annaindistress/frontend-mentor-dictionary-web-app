@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useDictionary } from "../context/DictionaryProvider";
 import styles from "./Search.module.css";
 
 export default function Search() {
-  const [value, setValue] = useState("");
+  const { query, handleSubmit: onSubmit } = useDictionary();
+  const [value, setValue] = useState(query);
   const [error, setError] = useState("");
 
   function handleInput(event) {
@@ -17,6 +19,8 @@ export default function Search() {
       setError("Whoops, can't be empty…");
       return;
     }
+
+    onSubmit(value);
   }
 
   return (

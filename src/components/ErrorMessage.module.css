@@ -1,0 +1,28 @@
+.section {
+  max-width: 650px;
+  margin-inline: auto;
+  padding-block: 48px 24px;
+  text-align: center;
+}
+
+.emoji {
+  display: block;
+  margin-bottom: 44px;
+  font-size: 64px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.section p {
+  margin: 0;
+  color: var(--color-46);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 108px;
+  }
+}
