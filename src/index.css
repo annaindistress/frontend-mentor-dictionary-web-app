@@ -67,6 +67,8 @@
   --body-text: var(--color-18);
   --select-bg: var(--color-100);
   --select-shadow: var(--color-0-transparent);
+  --search-bg: var(--color-96);
+  --search-placeholder: var(--color-18);
 
   --font: var(--font-sans);
 }
@@ -76,6 +78,8 @@
   --body-text: var(--color-100);
   --select-bg: var(--color-12);
   --select-shadow: var(--color-primary);
+  --search-bg: var(--color-12);
+  --search-placeholder: var(--color-100);
 }
 
 *,
