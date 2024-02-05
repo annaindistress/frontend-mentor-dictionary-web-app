@@ -10,7 +10,7 @@ export default function WordHeader() {
     word.phonetic ||
     word.phonetics.filter(
       (phonetic) => phonetic?.text && phonetic.text !== ""
-    )[0].text ||
+    )[0]?.text ||
     "";
 
   const audio =

@@ -75,7 +75,7 @@ function DictionaryProvider({ children }) {
     [query]
   );
 
-  function handleSubmit(value) {
+  function handleQueryChange(value) {
     dispatch({
       type: "query/updated",
       payload: value,
@@ -84,7 +84,14 @@ function DictionaryProvider({ children }) {
 
   return (
     <DictionaryContext.Provider
-      value={{ status, query, errorTitle, errorMessage, word, handleSubmit }}
+      value={{
+        status,
+        query,
+        errorTitle,
+        errorMessage,
+        word,
+        handleQueryChange,
+      }}
     >
       {children}
     </DictionaryContext.Provider>

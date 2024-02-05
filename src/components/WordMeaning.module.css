@@ -1,0 +1,78 @@
+.section {
+  border-top: 1px solid var(--word-border);
+}
+
+.section h2 {
+  width: max-content;
+  margin-top: -13px;
+  margin-bottom: 32px;
+  padding-right: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--body-bg);
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--color-46);
+}
+
+.meanings {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.meanings li {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding-left: 24px;
+}
+
+.meanings li::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.meanings p {
+  margin: 0;
+}
+
+.meanings q {
+  display: block;
+  color: var(--color-46);
+}
+
+@media (min-width: 768px) {
+  .section h2 {
+    margin-top: -17px;
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .meanings {
+    padding-left: 24px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+}

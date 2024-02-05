@@ -1,0 +1,52 @@
+.section {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: var(--color-46);
+}
+
+.section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  list-style: none;
+}
+
+.section a {
+  text-decoration: none;
+  color: var(--color-primary);
+  outline: none;
+}
+
+.section a:focus {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .section ul {
+    font-size: 20px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .section a:hover {
+    text-decoration: underline;
+  }
+}

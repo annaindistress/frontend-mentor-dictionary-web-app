@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDictionary } from "../context/DictionaryProvider";
 import styles from "./Search.module.css";
 
 export default function Search() {
-  const { query, handleSubmit: onSubmit } = useDictionary();
+  const { query, handleQueryChange } = useDictionary();
   const [value, setValue] = useState(query);
   const [error, setError] = useState("");
 
@@ -20,8 +20,15 @@ export default function Search() {
       return;
     }
 
-    onSubmit(value);
+    handleQueryChange(value);
   }
+
+  useEffect(
+    function () {
+      setValue(query);
+    },
+    [query]
+  );
 
   return (
     <form className={styles.search} onSubmit={handleSubmit}>
