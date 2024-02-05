@@ -6,11 +6,16 @@
   padding: 24px;
 }
 
-.header img {
+.header a {
   display: block;
   width: 29px;
-  height: auto;
   margin-right: auto;
+}
+
+.header img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -18,7 +23,7 @@
     padding: 58px 40px 51px;
   }
 
-  .header img {
+  .header a {
     width: 32px;
   }
 }

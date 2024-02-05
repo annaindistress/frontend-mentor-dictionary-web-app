@@ -15,10 +15,7 @@ export default function Search() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (!value) {
-      setError("Whoops, can't be empty…");
-      return;
-    }
+    if (!value) setError("Whoops, can't be empty…");
 
     handleQueryChange(value);
   }

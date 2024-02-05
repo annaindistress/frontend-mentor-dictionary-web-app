@@ -2,12 +2,14 @@ import { PropTypes } from "prop-types";
 import { createContext, useContext, useEffect, useReducer } from "react";
 
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+const INITIAL_QUERY = "keyboard";
 
 const DictionaryContext = createContext();
 
 const initialState = {
   status: "loading",
-  query: "keyboard",
+  initialQuery: INITIAL_QUERY,
+  query: INITIAL_QUERY,
   errorTitle: "",
   errorMessage: "",
   word: {},
@@ -24,6 +26,8 @@ function reducer(state, action) {
       };
     case "query/updated":
       return { ...state, status: "loading", query: action.payload };
+    case "query/cleared":
+      return { ...state, status: "cleared", query: "", word: {} };
     case "word/loaded":
       return {
         ...state,
@@ -38,11 +42,15 @@ function reducer(state, action) {
 }
 
 function DictionaryProvider({ children }) {
-  const [{ status, query, errorTitle, errorMessage, word }, dispatch] =
-    useReducer(reducer, initialState);
+  const [
+    { status, initialQuery, query, errorTitle, errorMessage, word },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   useEffect(
     function () {
+      if (query === "") return;
+
       const controller = new AbortController();
 
       async function getWord() {
@@ -76,6 +84,10 @@ function DictionaryProvider({ children }) {
   );
 
   function handleQueryChange(value) {
+    if (value === "") {
+      dispatch({ type: "query/cleared" });
+      return;
+    }
     dispatch({
       type: "query/updated",
       payload: value,
@@ -86,6 +98,7 @@ function DictionaryProvider({ children }) {
     <DictionaryContext.Provider
       value={{
         status,
+        initialQuery,
         query,
         errorTitle,
         errorMessage,
