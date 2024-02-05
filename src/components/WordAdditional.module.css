@@ -36,12 +36,22 @@
 }
 
 @media (min-width: 768px) {
+  .section {
+    margin-top: 41px;
+  }
+
   .title {
     font-size: 20px;
   }
 
   .section ul {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    margin-top: 63px;
   }
 }
 

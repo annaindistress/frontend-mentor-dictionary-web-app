@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 48px;
   gap: 0 8px;
+  margin-bottom: 40px;
 }
 
 .header h1 {
@@ -62,6 +63,7 @@
   .header {
     grid-template-columns: 1fr 75px;
     gap: 0 12px;
+    margin-bottom: 52px;
   }
 
   .header h1 {

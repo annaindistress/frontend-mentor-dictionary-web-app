@@ -1,5 +1,5 @@
 .search {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   font-size: 16px;
 }
 
@@ -51,6 +51,12 @@
   .search input {
     min-height: 64px;
     padding-block: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search {
+    margin-bottom: 46px;
   }
 }
 

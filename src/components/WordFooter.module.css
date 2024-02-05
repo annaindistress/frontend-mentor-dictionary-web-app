@@ -44,7 +44,8 @@
 @media (min-width: 768px) {
   .footer {
     grid-template-columns: min-content 1fr;
-    gap: 24px;
+    gap: 17px;
+    padding-top: 19px;
   }
 }
 

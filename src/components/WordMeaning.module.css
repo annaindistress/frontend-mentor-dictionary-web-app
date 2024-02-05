@@ -1,11 +1,16 @@
 .section {
+  margin-bottom: 44px;
   border-top: 1px solid var(--word-border);
+}
+
+.section:last-of-type {
+  margin-bottom: 35px;
 }
 
 .section h2 {
   width: max-content;
-  margin-top: -13px;
-  margin-bottom: 32px;
+  margin-top: -11px;
+  margin-bottom: 30px;
   padding-right: 16px;
   font-weight: 700;
   font-size: 18px;
@@ -22,7 +27,7 @@
 
 .meanings {
   display: grid;
-  gap: 12px;
+  gap: 13px;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -59,6 +64,14 @@
 }
 
 @media (min-width: 768px) {
+  .section {
+    margin-bottom: 54px;
+  }
+
+  .section:last-of-type {
+    margin-bottom: 42px;
+  }
+
   .section h2 {
     margin-top: -17px;
     margin-bottom: 40px;
@@ -74,5 +87,11 @@
     padding-left: 24px;
     font-size: 18px;
     line-height: 1.35;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    margin-bottom: 56px;
   }
 }
